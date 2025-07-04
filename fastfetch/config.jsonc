@@ -1,0 +1,201 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+      "source": "vagabond.txt",
+      "color": {
+        "1":"#ebdbb2"
+      }
+    },
+    "display": {
+        "color": {
+            "keys": "#83a598"
+        },
+        "separator": "",
+        "constants": [
+            "──────────────────────────────────────────────",
+            "\u001b[47D",
+            "\u001b[47C",
+            "\u001b[46C"
+        ],
+        "bar": {
+            "charElapsed": "⣿",
+            "charTotal": "⢕",
+            "width": 20
+        },
+        "percent": {
+            "type": 2,
+            "color": {
+                "green": "#b8bb26",
+                "yellow": "#fabd2f",
+                "red": "#fb4934"
+            }
+        },
+        "temp": {
+            "color": {
+                "green": "#b8bb26",
+                "yellow": "#fabd2f", 
+                "red": "#fb4934"
+            }
+        }
+    },
+    "modules": [
+
+        {
+            "type": "version",
+            "key": "╭─────────────────{$1}╮\u001b[60D",
+            "format": "\u001b[1m{#keys} FastFetch - [ {##ebdbb2}{2}{#keys} ] "
+        },
+        {
+            "type": "custom",
+            "key": "│{##ebdbb2}╭──────────────┬{$1}╮{#keys}│\u001b[30D",
+            "format": "{##ebdbb2} Machine "
+        },
+        {
+            "type": "cpu",
+            "key": "│{##ebdbb2}│ {icon}  CPU       │{$4}│{#keys}│{$2}",
+            "showPeCoreCount": true,
+            "temp": true,
+            "format": "{##ebdbb2}[ {##83a598}{1}{##ebdbb2} ] ~ {##ebdbb2}{8}{##ebdbb2}"
+        },
+        {
+            "type": "gpu",
+            "key": "│{##ebdbb2}│ {icon}  GPU       │{$4}│{#keys}│{$2}",
+            "temp": true,
+            "format": "{##ebdbb2}[ {##fb4934}{2}{##ebdbb2} ] ~ {##ebdbb2}{4}{##ebdbb2}"
+        },
+        {
+            "type": "memory",
+            "key": "│{##ebdbb2}│ {icon}  Memory    │{$4}│{#keys}│{$2}",
+            "format": "{4} {##ebdbb2}[ {##ebdbb2}{1}{##ebdbb2} ]"
+        },
+        {
+            "type": "swap",
+            "key": "│{##ebdbb2}│ {icon}  Swap      │{$4}│{#keys}│{$2}",
+            "format": "{4} {##ebdbb2}[ {##ebdbb2}{1}{##ebdbb2} ]"
+        },
+        {
+            "type": "disk",
+            "key": "│{##ebdbb2}│ {icon}  Disk      │{$4}│{#keys}│{$2}",
+            "format": "{13} {##ebdbb2}[ {##ebdbb2}{1}{##ebdbb2} ]"
+        },
+        {
+            "type": "disk",
+            "key": "│{##ebdbb2}│ {icon}  Type      │{$4}│{#keys}│{$2}",
+            "format": "{##ebdbb2}{9}"
+        },
+        {
+            "type": "custom",
+            "key": "│{##ebdbb2}╰──────────────┴{$1}╯{#keys}│",
+            "format": ""
+        },
+        {
+            "type": "custom",
+            "key": "│{##83a598}╭──────────────┬{$1}╮{#keys}│\u001b[30D",
+            "format": "{##83a598} Linux "
+        },
+        {
+            "type": "kernel",
+            "keyIcon": "󰣇",
+            "key": "│{##83a598}│ {icon}  Kernel    │{$4}│{#keys}│{$2}",
+            "format": "{##83a598}{2} ~> [ {##ebdbb2}{4}{##83a598} ]"
+        },
+        {
+            "type": "de",
+            "key": "│{##458588}│ {icon}  Desktop   │{$4}│{#keys}│{$2}",
+            "format": "{##458588}{2} ~> [ {##ebdbb2}{3}{##458588} ]"
+        },
+        {
+            "type": "custom",
+            "key": "│{##458588}╰──────────────┴{$1}╯{#keys}│",
+            "format": ""
+        },
+        {
+            "type": "custom",
+            "key": "│{##fabd2f}╭──────────────┬{$1}╮{#keys}│\u001b[30D",
+            "format": "{##fabd2f} Shell "
+        },
+        {
+            "type": "shell",
+            "key": "│{##fabd2f}│ {icon}  Shell     │{$4}│{#keys}│{$2}",
+            "format": "{##fabd2f}{6} ~> [ {##ebdbb2}{4}{##fabd2f} ]"
+        },
+        {
+            "type": "terminal",
+            "key": "│{##d79921}│ {icon}  Terminal  │{$4}│{#keys}│{$2}",
+            "format": "{##d79921}{5} ~> [ {##ebdbb2}{6}{##d79921} ]"
+        },
+        {
+            "type": "packages",
+            "key": "│{##fe8019}│ {icon}  Packages  │{$4}│{#keys}│{$2}",
+            "format": "{##fe8019}pacman ~> [ {##ebdbb2}{2}{##fe8019} ]"
+        },
+        {
+            "type": "packages",
+            "key": "│{##d65d0e}│ {icon}  Packages  │{$4}│{#keys}│{$2}",
+            "format": "{##d65d0e}flatpak ~> [ {##ebdbb2}{44}{##d65d0e} ]"
+        },
+        {
+            "type": "custom",
+            "key": "│{##d65d0e}╰──────────────┴{$1}╯{#keys}│",
+            "format": ""
+        },
+        {
+            "type": "custom",
+            "key": "│{##fb4934}╭──────────────┬{$1}╮{#keys}│\u001b[30D",
+            "format": "{##fb4934} Dev "
+        },
+        {
+            "type": "command",
+            "keyIcon": "",
+            "key": "│{##fb4934}│ {icon}  Editor    │{$4}│{#keys}│{$2}",
+            "text": "helix --version | head -n 1 | cut -d' ' -f2",
+            "format": "{##fb4934}helix ~> [ {##ebdbb2}{}{##fb4934} ]"
+        },
+        {
+            "type": "command",
+            "keyIcon": "󰊢",
+            "key": "│{##cc241d}│ {icon}  Git       │{$4}│{#keys}│{$2}",
+            "text": "git --version | cut -d' ' -f3",
+            "format": "{##cc241d}git ~> [ {##ebdbb2}{}{##cc241d} ]"
+        },
+        {
+            "type": "custom",
+            "key": "│{##cc241d}╰──────────────┴{$1}╯{#keys}│",
+            "format": ""
+        },
+        {
+            "type": "custom",
+            "key": "│{##8ec07c}╭──────────────┬{$1}╮{#keys}│\u001b[30D",
+            "format": "{##8ec07c} Status "
+        },
+        {
+            "type": "datetime",
+            "keyIcon": "󰥔",
+            "key": "│{##8ec07c}│ {icon}  Fetched   │{$4}│{#keys}│{$2}",
+            "format": "{##8ec07c}[ {##ebdbb2}{hour-pretty} : {minute-pretty} : {second-pretty}{##8ec07c} ] • [ {##ebdbb2}{day-pretty} / {month-pretty} / {year}{##8ec07c} ]"
+        },
+        {
+            "type": "uptime",
+            "keyIcon": "󰅐",
+            "key": "│{##689d6a}│ {icon}  Uptime    │{$4}│{#keys}│{$2}",
+            "format": "{##689d6a}[ {##ebdbb2}{1}d {2}h {3}m{##689d6a} ]"
+        },
+        {
+            "type": "command",
+            "keyIcon": "󰝚",
+            "key": "│{##427b58}│ {icon}  Media     │{$4}│{#keys}│{$2}",
+            "text": "playerctl metadata --format '{{status}}|{{title}}|{{artist}}' 2>/dev/null | awk -F'|' '{status=$1; title=$2; artist=$3; if(status==\"Playing\") icon=\"󰐊\"; else if(status==\"Paused\") icon=\"󰏤\"; else icon=\"󰓛\"; printf \"%s %s\", icon, title; if(artist) printf \" - %s\", artist}'",
+            "format": "{##fabd2f}{:-45}{#}"
+        },
+        {
+            "type": "custom",
+            "key": "│{##427b58}╰──────────────┴{$1}╯{#keys}│",
+            "format": ""
+        },
+        {
+            "type": "custom",
+            "key": "╰─────────────────{$1}╯",
+            "format": ""
+        }
+    ]
+}
